@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Name app"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PROEKT"
+        tools:targetApi="31">
+        <activity
+            android:name=".basket"
+            android:exported="false" />
+        <activity
+            android:name=".MainAnalyses"
+            android:exported="false" />
+        <activity
+            android:name=".MainWindow"
+            android:exported="false" />
+        <activity
+            android:name=".CardPatient"
+            android:exported="false" />
+        <activity
+            android:name=".Search"
+            android:exported="false" />
+        <activity
+            android:name=".OrderFinal"
+            android:exported="false" />
+        <activity
+            android:name=".AddCardPatient"
+            android:exported="false" />
+        <activity
+            android:name=".PinCode"
+            android:exported="false" />
+        <activity
+            android:name=".RegistrationEmail"
+            android:exported="false" />
+        <activity
+            android:name=".OnboardThree"
+            android:exported="false" />
+        <activity
+            android:name=".OnboardTwo"
+            android:exported="false" />
+        <activity
+            android:name=".OnboardOne"
+            android:exported="false" />
+        <activity
+            android:name=".CodeEmail"
+            android:exported="false" />
+        <activity
+            android:name=".email_two"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:label="Home" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
