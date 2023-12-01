@@ -1,18 +1,33 @@
 package com.example.proekt
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import android.os.CountDownTimer
+import android.text.Editable
+import com.example.proekt.databinding.ActivityCodeEmailBinding
+import com.example.proekt.databinding.ActivityRegistrationEmailBinding
+import java.util.Timer
+import kotlin.time.Duration.Companion.hours
+import kotlin.time.Duration.Companion.milliseconds
+import kotlin.time.Duration.Companion.seconds
 
 class CodeEmail : AppCompatActivity() {
+    var binding : ActivityCodeEmailBinding? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_code_email)
+        binding = ActivityCodeEmailBinding.inflate(layoutInflater)
+        setContentView(binding!!.root)
+        timer.start()
     }
-    fun onMyButtonClick(view: View?) {
+    val timer = object : CountDownTimer(60000,1000)
+    {
+        override fun onTick(millisUntilFinished: Long) {
+            binding!!.count.text = "Отправить код повторно можно будет через " + millisUntilFinished.milliseconds.inWholeSeconds + " секунд"
+        }
 
-        val intent = Intent (this@CodeEmail,    RegistrationEmail::class.java)
-        startActivity(intent)
+        override fun onFinish() {
+            start()
+        }
     }
 }

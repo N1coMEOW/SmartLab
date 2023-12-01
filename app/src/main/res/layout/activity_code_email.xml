@@ -50,41 +50,39 @@
     <com.chaos.view.PinView
         android:id="@+id/firstPinView"
         style="@style/PinWidget.PinView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
         android:cursorVisible="true"
         android:inputType="number"
+        android:itemBackground="@drawable/styleemail"
         android:maxLength="1"
-        android:itemBackground="@drawable/stylebtmcode"
-        android:textSize="20dp"
         android:textAlignment="center"
+        android:textSize="20dp"
         app:cursorWidth="2dp"
         app:hideLineWhenFilled="true"
         app:itemCount="4"
         app:itemHeight="48dp"
-        app:lineColor="#EBEBEB"
         app:itemRadius="8dp"
         app:itemSpacing="16dp"
         app:itemWidth="48dp"
-        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:lineColor="#EBEBEB"
         app:lineWidth="2dp"
         app:viewType="rectangle" />
 
 
-
     <TextView
-        android:id="@+id/textView9"
-        android:layout_width="242dp"
-        android:layout_height="40dp"
-        android:text="Отправить код повторно можно будет через 59 секунд"
-        android:layout_marginTop="16dp"
+        android:id="@+id/count"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
         android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstPinView" />
+        android:layout_marginTop="24dp"
+        android:textColor="#939396"
+        app:layout_constraintTop_toBottomOf="@+id/firstPinView"
+        tools:layout_editor_absoluteX="86dp" />
 
 
 
